@@ -19,6 +19,7 @@ def main(maxvalue):
     while last_value <= maxvalue:
 
         if isEven(last_value):
+            print('Found an even fibonacci number: %s' % last_value)
             count += 1
             sum += last_value
         new_value = next_last_value + last_value

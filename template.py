@@ -1,4 +1,4 @@
-# Project Euler problem template
+# Math problem template
 
 import sys
 

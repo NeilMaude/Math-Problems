@@ -1,4 +1,4 @@
-# Project Euler problem #3
+# Math problem #3
 # Largest prime factor (of large number)
 
 import sys

@@ -1,4 +1,4 @@
-# Project Euler - problem #1
+# Math - problem #1
 # Count values which are a multiple of 3 or 5 in natural numbers up to N
 
 import sys

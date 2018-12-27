@@ -1,4 +1,4 @@
-# Project Euler problem #5
+# Math problem #5
 # Smallest number which is evenly divisible by all numbers up to N
 
 import sys

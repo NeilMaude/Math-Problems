@@ -1,4 +1,4 @@
-# Project Euler problem #2
+# Math problem #2
 # Sum of all even Fibonacci numbers less than or equal to a maxumum value (4 million)
 
 import sys

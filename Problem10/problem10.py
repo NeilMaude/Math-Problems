@@ -1,9 +1,25 @@
-# Math problem template
+# Math problem #10
+# Sum primes up to a value
 
 import sys
-import time
+
+primes = []
 
 # Define helper functions here
+
+def check_factors(n):
+    # Check the list of primes found so far - are any a factor of the target
+    global primes
+    prime_target = True
+    for p in primes:
+        if n % p == 0:
+            prime_target = False
+            break
+    if prime_target == True:
+        # the input value is a prime number
+        print('Found prime number %s' % n)
+        primes += [n]
+    return prime_target
 
 # Useful progress indicator
 def print_progress(i):
@@ -27,9 +43,19 @@ def print_progress(i):
 def main(n):
     print('Main calculation...')
 
+    print('Finding %s-th prime' % n)
     # Main calculation code here...
 
+    # Find all primes until we are done...
+    next_value = 2
+    while next_value <= n:
+        print_progress(next_value)
+        check_factors(next_value)
+        next_value += 1
+
     output = 0
+    for x in primes:
+        output += x
 
     return output
 
@@ -43,8 +69,5 @@ if __name__ == "__main__":
         unit_tests()
     else:
         # Run main calculation with input parameter - change for more params...
-        start_time = time.time()
         result = main(int(sys.argv[1]))
-        end_time = time.time()
         print('Result for input %s is %s' % (sys.argv[1], result))
-        print('Time taken was', time.strftime("%H:%M:%S", time.gmtime(end_time-start_time)))

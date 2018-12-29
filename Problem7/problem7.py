@@ -1,7 +1,8 @@
-# Math problem #3
-# Largest prime factor (of large number)
+# Math problem #7
+# Find n-th prime
 
 import sys
+import time
 
 primes = []
 
@@ -67,5 +68,8 @@ if __name__ == "__main__":
         unit_tests()
     else:
         # Run main calculation with input parameter - change for more params...
+        start_time = time.time()
         result = main(int(sys.argv[1]))
+        end_time = time.time()
         print('Result for input %s is %s' % (sys.argv[1], result))
+        print('Time taken was', time.strftime("%H:%M:%S", time.gmtime(end_time - start_time)))

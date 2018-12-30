@@ -179,7 +179,10 @@ if __name__ == "__main__":
     else:
         # Run main calculation with input parameter - change for more params...
         start_time = time.time()
-        result = main(int(sys.argv[1]))
+        if len(sys.argv) == 3:
+            result = main(int(sys.argv[1]), n_start=int(sys.argv[2]))
+        else:
+            result = main(int(sys.argv[1]))
         end_time = time.time()
         print('Result for input %s is %s' % (sys.argv[1], result))
         print('Time taken was', time.strftime("%H:%M:%S", time.gmtime(end_time-start_time)))

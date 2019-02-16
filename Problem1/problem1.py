@@ -2,6 +2,7 @@
 # Count values which are a multiple of 3 or 5 in natural numbers up to N
 
 import sys
+import time
 
 def isMultiple(n):
     if n % 3 == 0:
@@ -30,5 +31,8 @@ if __name__ == "__main__":
     else:
         print('Running main calculation')
         print('Counting multiples up to : %s' % sys.argv[1])
+        start_time = time.time()
         count, sum = main(int(sys.argv[1]))
+        end_time = time.time()
         print('Result for %s is %s, with count of %s' % (sys.argv[1], sum, count))
+        print('Time taken was', time.strftime("%H:%M:%S", time.gmtime(end_time - start_time)))
